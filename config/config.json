@@ -1,0 +1,45 @@
+{
+  "directories": {
+    "input_gallagher": "input/gallagher_photos",
+    "processing_renamed": "processing/renamed",
+    "processing_cropped": "processing/cropped",
+    "processing_failed": "processing/failed",
+    "output_successful": "output/successful",
+    "output_ad_ready": "output/ad_ready",
+    "logs": "logs"
+  },
+  "face_processing": {
+    "target_size": [96, 96],
+    "max_file_size_kb": 100,
+    "intermediate_size": [256, 256],
+    "padding_width_factor": 0.6,
+    "padding_height_factor": 1.5,
+    "min_face_confidence": 0.5,
+    "jpeg_quality_start": 95,
+    "jpeg_quality_min": 10,
+    "jpeg_quality_step": 5,
+    "batch_size": 50,
+    "supported_formats": [".jpg", ".jpeg", ".png"]
+  },
+  "insightface": {
+    "model_name": "buffalo_l",
+    "providers": ["CPUExecutionProvider"],
+    "ctx_id": 0
+  },
+  "active_directory": {
+    "server": "your-dc-server.domain.com",
+    "search_base": "DC=domain,DC=com",
+    "thumbnail_attribute": "thumbnailPhoto",
+    "batch_size": 25
+  },
+  "azure_ad_connect": {
+    "server": "your-aad-connect-server.domain.com",
+    "sync_command": "Start-ADSyncSyncCycle -PolicyType Delta"
+  },
+  "logging": {
+    "level": "INFO",
+    "max_file_size_mb": 10,
+    "backup_count": 5,
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  }
+}

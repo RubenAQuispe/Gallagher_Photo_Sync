@@ -1,0 +1,97 @@
+# Logs and temporary files
+logs/
+*.log
+*.tmp
+*.temp
+
+# Input/output directories (may contain sensitive data)
+input/gallagher_photos/*
+!input/gallagher_photos/.gitkeep
+processing/renamed/*
+!processing/renamed/.gitkeep
+processing/cropped/*
+!processing/cropped/.gitkeep
+processing/failed/*
+!processing/failed/.gitkeep
+output/successful/*
+!output/successful/.gitkeep
+output/ad_ready/*
+!output/ad_ready/.gitkeep
+
+# Configuration files that may contain sensitive data
+config/config.json.local
+config/production.json
+config/*secrets*
+config/*password*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# PowerShell
+*.ps1xml
+
+# Windows
+*.lnk
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Test files
+test_images/
+sample_photos/
+
+# Credentials and secrets
+*.key
+*.pem
+*.p12
+*.pfx
+credentials.json
+secrets.json
